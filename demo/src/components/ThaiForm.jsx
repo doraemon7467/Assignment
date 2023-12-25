@@ -8,7 +8,7 @@ function ThaiForm() {
 
     const handleUpload = async (e) => {
         e.preventDefault();
-        setButtonColor('bg-red-600'); // Set the button color to red after clicking
+        setButtonColor('bg-red-600'); 
 
         const formData = new FormData();
         formData.append('file', file);
@@ -18,8 +18,8 @@ function ThaiForm() {
             console.log(response);
 
             setTimeout(() => {
-                setButtonColor('bg-green-600'); // Reset the button color to green after a delay
-            }, 0.1); // Change button color back to green after 500ms (0.5 seconds)
+                setButtonColor('bg-green-600'); 
+            }, 0.1); 
         } catch (error) {
             console.error(error);
         }

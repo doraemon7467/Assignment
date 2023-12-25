@@ -39,7 +39,6 @@ const DataList = () => {
   };
 
   const handleUpdate = (id) => {
-    // Set the respective field as editable
     setEditableFields(prevState => ({
       ...prevState,
       [id]: true,
@@ -47,7 +46,6 @@ const DataList = () => {
   };
 
   const handleFieldChange = (id, field, value) => {
-    // Update the data locally as the field value changes
     setData(prevData => {
       const newData = prevData.map(item => {
         if (item._id === id) {

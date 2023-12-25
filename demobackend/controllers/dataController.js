@@ -1,6 +1,5 @@
 const OCRData = require('../models/thaiModel');
-// Import the detectText function
-const detectText = require('./mainCode'); // Replace with the correct path to your file
+const detectText = require('./mainCode');
 
 
 const asyncHandler = require('express-async-handler')
@@ -10,7 +9,7 @@ const asyncHandler = require('express-async-handler')
 const getData = asyncHandler(async (req, res) => {
     try {
         const data = await OCRData.find();
-        res.status(200).json(data); // Send the retrieved data as JSON response
+        res.status(200).json(data); 
     } catch (error) {
         console.error('Error fetching data:', error);
         res.status(500).json({ message: 'Server Error' });
@@ -22,14 +21,11 @@ const getData = asyncHandler(async (req, res) => {
 //@access public
 const createData = asyncHandler(async (req, res) => {
 
-    // Call the detectText function to get the extracted data
     const file = req.file;
     const extractedData = await detectText(file);
-    // Access the extracted variables
     const { idnumber, name, lastname, dob, doi, doe } = extractedData;
     console.log(idnumber," ",name," ",lastname," ",dob," ",doi," ",doe);
 
-    // Create a new OCRData object using the defined schema with parsed dates
     const ocrData = new OCRData({
         idNumber: idnumber,
         name: name,
@@ -39,7 +35,6 @@ const createData = asyncHandler(async (req, res) => {
         dateOfExpiry: doe,
     });
 
-    // Save the extracted data to the database
     await ocrData.save();
 
     res.status(201).json({ message: 'OCR data saved successfully!' });
@@ -50,14 +45,14 @@ const createData = asyncHandler(async (req, res) => {
 //@route PUT /api/data/:id
 //@access public
 const updateData = asyncHandler(async (req, res) => {
-    const { id } = req.params; // Get the ID from request parameters
-    const { idNumber, name, lastName, dateOfBirth, dateOfIssue, dateOfExpiry } = req.body; // Get updated data from request body
+    const { id } = req.params; 
+    const { idNumber, name, lastName, dateOfBirth, dateOfIssue, dateOfExpiry } = req.body; 
 
     try {
         const updatedData = await OCRData.findByIdAndUpdate(
             id,
             { idNumber, name, lastName, dateOfBirth, dateOfIssue, dateOfExpiry },
-            { new: true } // To return the updated data
+            { new: true } 
         );
 
         if (!updatedData) {
@@ -75,7 +70,7 @@ const updateData = asyncHandler(async (req, res) => {
 //@route DELETE /api/data/:id
 //@access public
 const deleteData = asyncHandler(async (req, res) => {
-    const { id } = req.params; // Get the ID from request parameters
+    const { id } = req.params; 
 
     try {
         const deletedData = await OCRData.findByIdAndDelete(id);

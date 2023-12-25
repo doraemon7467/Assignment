@@ -59,7 +59,7 @@ async function detectText(file) {
                 }
             }
         }
-        return { idnumber, name, lastname, dob, doi, doe };
+        return { idnumber, name, lastname, dob, doi, doe};
 
     } catch (error) {
         console.error('Error detecting text:', error);

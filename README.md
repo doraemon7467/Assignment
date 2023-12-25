@@ -2,14 +2,12 @@
 Welcome to ThaiDataX🎯! <br><br>
 
 # Table of Contents📄
-- Demo
 - Features
 - Installation
 - Usage
 - Future Enhancements
 - License
 
-# Demo💻
 
 
   
