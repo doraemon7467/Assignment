@@ -28,6 +28,7 @@ Integrate the application with Google Vision API to perform OCR on id card image
 
 - **Real-time Updates** 
 update the displayed data after performing actions (edit or delete) without refreshing the page.
+NOTE : Please press the fetch button again to see the updated data 
 
 - **JSON Data View** 
 View fetched data in JSON format.
