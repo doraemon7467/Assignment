@@ -14,7 +14,7 @@ function ThaiForm() {
         formData.append('file', file);
 
         try {
-            const response = await axios.post('https://assignment-server-amber.vercel.app/api/data', formData);
+            const response = await axios.post('http://localhost:5001/api/data', formData);
             console.log(response);
 
             setTimeout(() => {
