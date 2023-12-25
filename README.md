@@ -2,6 +2,7 @@
 Welcome to ThaiDataX🎯! <br><br>
 
 # Table of Contents📄
+- Link of the Website
 - Features
 - Installation
 - Usage
@@ -9,7 +10,9 @@ Welcome to ThaiDataX🎯! <br><br>
 - License
 
 
-
+# Link
+Please click on the following link to go to the website
+https://assignment-frontend-pied.vercel.app/
   
 # Features💫
 - **Data Retrieval** 
