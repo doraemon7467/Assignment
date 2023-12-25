@@ -10,7 +10,6 @@ const asyncHandler = require('express-async-handler')
 const getData = asyncHandler(async (req, res) => {
     try {
         const data = await OCRData.find();
-        console.log(data) // Retrieve all data from the database
         res.status(200).json(data); // Send the retrieved data as JSON response
     } catch (error) {
         console.error('Error fetching data:', error);

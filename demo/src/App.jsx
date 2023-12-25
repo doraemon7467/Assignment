@@ -1,7 +1,6 @@
-import { useState } from 'react'
 import './App.css'
 import ThaiForm from './components/ThaiForm'
-import ThaiItem from './components/ThaiItem'
+import DataList from './components/ThaiData'
 
 function App() {
 
@@ -14,8 +13,7 @@ function App() {
                         <ThaiForm/>
                     </div>
                     <div className="flex flex-wrap gap-y-3">
-                        {/*Loop and Add TodoItem here */}
-                        {/* <ThaiItem/> */}
+                        <DataList/>
                     </div>
                 </div>
             </div>
