@@ -12,7 +12,7 @@ const DataList = () => {
 
   const fetchData = async () => {
     try {
-      const response = await axios.get('http://localhost:5001/api/data');
+      const response = await axios.get('https://thaiiddetection.vercel.app/api/data');
       setData(response.data);
       setJsonData(JSON.stringify(response.data, null, 2));
       initializeEditableFields(response.data);
@@ -31,7 +31,7 @@ const DataList = () => {
 
   const handleDelete = async (id) => {
     try {
-      await axios.delete(`http://localhost:5001/api/data/${id}`);
+      await axios.delete(`https://thaiiddetection.vercel.app/api/data/${id}`);
       fetchData();
     } catch (error) {
       console.error('Error deleting data:', error);
@@ -60,7 +60,7 @@ const DataList = () => {
   const handleSave = async (id) => {
     try {
       const updatedItem = data.find(item => item._id === id);
-      await axios.put(`http://localhost:5001/api/data/${id}`, updatedItem);
+      await axios.put(`https://thaiiddetection.vercel.app/api/data/${id}`, updatedItem);
       setEditableFields(prevState => ({
         ...prevState,
         [id]: false,
