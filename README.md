@@ -12,7 +12,6 @@ Welcome to ThaiDataX🎯! <br><br>
 - Future Enhancements
 - License
 
-
   
 # Features💫
 - **Data Retrieval** 
