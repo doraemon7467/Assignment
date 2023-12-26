@@ -26,7 +26,7 @@ async function detectText(file) {
                     idnumber = arr[i][j]+arr[i][j+1]+arr[i][j+2]+arr[i][j+3]+arr[i][j+4];
                 }
                 if(arr[i][j] == 'Name'){
-                    name = arr[i][j+1]+arr[i][j+2];
+                    name = arr[i][j+1]+ " " + arr[i][j+2];
                 }
                 if(arr[i][j]== "Last"){
                     lastname = arr[i][j+2];
