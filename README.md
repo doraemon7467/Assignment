@@ -3,7 +3,10 @@ Welcome to ThaiDataX🎯! <br><br>
 
 # Let's see the Demo Vedio first 
 
-<video src="demo.mp4" controls title="Title">Vedio</video>
+
+
+https://github.com/doraemon7467/Assignment/assets/106157824/f60fd168-6bb5-4d8d-bf0a-595bc18adea5
+
 
 
 # Table of Contents📄
