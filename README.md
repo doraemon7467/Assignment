@@ -1,6 +1,10 @@
 # ThaiDataX - Thai ID OCR Detection
 Welcome to ThaiDataX🎯! <br><br>
 
+- **Let's see the Demo Vedio first**
+
+<video src="demo.mp4" controls title="Title"></video>
+
 # Table of Contents📄
 - Features
 - Installation
