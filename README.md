@@ -1,13 +1,16 @@
 # ThaiDataX - Thai ID OCR Detection
 Welcome to ThaiDataX🎯! <br><br>
 
+# Demo Vedio
+
+https://github.com/doraemon7467/Assignment/blob/main/demo.mp4
+
 # Table of Contents📄
 - Features
 - Installation
 - Usage
 - Future Enhancements
 - License
-
 
   
 # Features💫
