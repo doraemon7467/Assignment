@@ -3,7 +3,7 @@ Welcome to ThaiDataX🎯! <br><br>
 
 # Let's see the Demo Vedio first 
 
-<video src="demo.mp4" controls title="Title"></video>
+<video src="demo.mp4" controls title="Title">Vedio</video>
 
 
 # Table of Contents📄
