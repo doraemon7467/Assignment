@@ -21,6 +21,11 @@ const getData = asyncHandler(async (req, res) => {
 //@access public
 const createData = asyncHandler(async (req, res) => {
 
+    if (!req.file) {
+        return res.status(400).send('No file uploaded.');
+    }
+    // File uploaded successfully
+    res.status(200).send('File uploaded.');
     const file = req.file;
     const extractedData = await detectText(file);
     const { idnumber, name, lastname, dob, doi, doe } = extractedData;
