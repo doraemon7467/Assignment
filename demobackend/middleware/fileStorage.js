@@ -2,14 +2,16 @@ const multer = require('multer');
 const path = require('path');
 
 const storage = multer.diskStorage({
-    destination: function (req, file, cb) {
-      cb(null, './Images'); // Save uploaded files to the 'uploads' directory
+    destination : (req,file,cb) => {
+        cb(null,'./Images')
     },
-    filename: function (req, file, cb) {
-      cb(null, Date.now() + '-' + file.originalname); // Define the filename
-    },
-  });
+    filename : (req,file,cb) => {
+        cb(null, file.fieldname + "_" + Date.now() + path.extname(file.originalname))
+    }
+})
 
-const upload = multer({ storage: storage });
+const upload = multer({
+    storage : storage
+})
 
 module.exports = upload;
